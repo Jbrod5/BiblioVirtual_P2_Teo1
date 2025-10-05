@@ -106,6 +106,7 @@ Publicacion
     descripcion string
     categoria REFERENCES Categoria_publicacion(id_categoria) -- puede ser ciencia, arte, opinion :3 
     contenido text -- Esto mmm puede/debe ser un pdf, documento, etc??? que quede como texto temporalmente
+    url_archivo string -- url al archivo pdf, doc o lo que sea que se necesite si se necesita xd puede ser null
     fecha_publicacion timestamp
 
     precio_saldo
@@ -130,6 +131,7 @@ Reseña_publicacion
     usuario REFERENCES Usuario(username)
     calificacion INTEGER
     reseña text
+    fecha timestamp
 
     
 
@@ -137,3 +139,4 @@ Reporte_publicacion
     publicacion REFERENCES Publicacion(id_publicacion)
     usuario REFERENCES Usuario(username)
     descripcion TEXT
+    fecha timestamp
