@@ -64,6 +64,13 @@ Transaccion -- historial de transacciones, sirve tanto para saldo como puntos :3
     descripcion text -- es una descripcion de la transaccion :3
     fecha timestamp
 
+Ingreso_plataforma
+    id_ingreso
+    usuario REFERENCES Usuario(username)
+    fecha timestamp
+    descripcion text
+    ingreso double
+
 
 Tarjetas -- lista de tarjetas que tienen los usuarios
     usuario REFERENCES Usuario(username)
